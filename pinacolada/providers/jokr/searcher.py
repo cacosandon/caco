@@ -18,6 +18,9 @@ class JokrSearcher(BaseSearcher):
       longitude = self.longitude
     )
 
+    if not hub_id:
+      return []
+
     products = self.client.search_products(search_term = search_term, hub_id = hub_id)
     products_skus = list(map(lambda product: product['sku'], products))
 
