@@ -2,9 +2,11 @@ from fastapi import FastAPI, HTTPException
 from pinacolada.api.types import Providers, Products
 
 from pinacolada.providers.jokr.searcher import JokrSearcher
+from pinacolada.providers.lysto.searcher import LystoSearcher
 
 AVAILABLE_PROVIDERS = {
-  'jokr': JokrSearcher
+  'jokr': JokrSearcher,
+  'lysto': LystoSearcher
 }
 
 app = FastAPI()
