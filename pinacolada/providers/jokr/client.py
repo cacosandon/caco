@@ -47,7 +47,9 @@ class JokrClient(GraphqlClient):
     variables = { "searchTerm": search_term, "hubId": hub_id }
 
     response = self.run(query, variables)
-    return deep_get(response, 'data', 'searchProducts', 'products')
+    products = deep_get(response, 'data', 'searchProducts', 'products')
+
+    return [] if products is None else products
 
   def get_products_data(self, skus: List[str], hub_id: str) -> List[dict[str, Union[str, int]]]:
     """
@@ -70,4 +72,6 @@ class JokrClient(GraphqlClient):
     variables = { "productsSkus": skus, "hubId": hub_id }
 
     response = self.run(query, variables)
-    return deep_get(response, 'data', 'products')
+    products_data = deep_get(response, 'data', 'products')
+
+    return [] if products_data is None else products_data

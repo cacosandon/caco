@@ -18,6 +18,9 @@ class JokrSearcher(BaseSearcher):
       longitude = self.longitude
     )
 
+    if not hub_id:
+      return []
+
     products = self.client.search_products(search_term = search_term, hub_id = hub_id)
     products_skus = list(map(lambda product: product['sku'], products))
 
@@ -27,7 +30,7 @@ class JokrSearcher(BaseSearcher):
 
   def __parse_product_data(self, product_data: dict[str, str]):
     return {
-      'name': product_data['name'],
+      'name': deep_get(product_data, 'name'),
       'image_url': deep_get(product_data, 'packshot1_front_grid', 'url'),
       'price_amount': deep_get(product_data, 'price', 'amount')
     }
