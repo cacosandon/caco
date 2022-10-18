@@ -10,3 +10,4 @@
 
 ## Implemented Clients
 - [Jokr](https://www.jokr.com/)
+- [Lysto](https://www.lysto.cl/)

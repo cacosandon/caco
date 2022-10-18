@@ -1,6 +1,5 @@
 import requests
-
-SUCCESS_STATUS_CODE = 200
+from pinacolada.constants import SUCCESS_STATUS_CODE
 
 class GraphqlClient:
   """
