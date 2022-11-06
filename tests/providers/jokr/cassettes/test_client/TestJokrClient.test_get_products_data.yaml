@@ -1,0 +1,61 @@
+interactions:
+- request:
+    body: '{"query": "\n      query GetProductsData($productsSkus: [String!], $hubId:
+      String!) {\n        products(where: { sku_in: $productsSkus }) {\n          name\n          packshot1_front_grid
+      {\n            url\n          }\n          price(hubId: $hubId) {\n            amount\n          }\n        }\n      }\n    ",
+      "variables": {"productsSkus": ["1111111411111", "7802200270022"], "hubId": "SCL003"}}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '400'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.28.1
+    method: POST
+    uri: https://api-prd-cl.jokrtech.com/
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAA/7WQzWrDMBCEX8Xo4FOJLUe2LINpoSWQQ06FXkoJG2ntuI0lo59QGvTuVSgt9Fx6
+        W5aZYea7EAUeSHchizUqSO9I93whGmYkHdmB/gAN2Sa8ThnNglbkhiwg39zReLofrNF+P9pJXQOC
+        PSXL0fvFdUWB757X5coBuJVMMtTeoT2ney5AzZMutjOM+Jh+aFfLcbndPvSDEthCVYlKiLuvhNyC
+        Vr3igjHOcFgLDjWWKgmxYRQYrdct4/kJ9NjTfDBWYu9twFyak7EulcXejod8sejQ94LEtMBOEq+V
+        YTZBe9Kxponx5mf2vZkX4yF7ms4m203ZxgaffbMQ5fi/ECirqgEoLylnvyAIpaqSMwWilrVqkcq1
+        ktUgW2hr2hzav0IQZYwvMX4CAhhbERMCAAA=
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-Ray:
+      - 765edf5b39c785b6-SCL
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json
+      Date:
+      - Sun, 06 Nov 2022 15:30:48 GMT
+      Server:
+      - cloudflare
+      Server-Timing:
+      - cf-q-config;dur=7.0000023697503e-06
+      Strict-Transport-Security:
+      - max-age=2592000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - origin, Accept-Encoding
+      Via:
+      - 1.1 google
+    status:
+      code: 200
+      message: OK
+version: 1

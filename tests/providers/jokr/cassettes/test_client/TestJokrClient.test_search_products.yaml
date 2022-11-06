@@ -1,0 +1,59 @@
+interactions:
+- request:
+    body: '{"query": "\n      query SearchProducts($searchTerm: String!, $hubId: String)
+      {\n        searchProducts(searchTerm: $searchTerm, hubId: $hubId) {\n          products
+      {\n            sku\n          }\n        }\n      }\n    ", "variables": {"searchTerm":
+      "manzana", "hubId": "SCL003"}}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '284'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.28.1
+    method: POST
+    uri: https://api-prd-cl.jokrtech.com/
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAA/22Quw6DMAxF/yVzBz9iJ+ErulcdEFSq1KEVjwnx7zWgVpCQKFF0bN/Yd3JtPdSu
+        mlz/qLvmee3e7dgM/UI+//fNwq/RVQ635dfbzZcfDxGIACjYoR3f59Mx36tYETCFI0c1IVAln3O0
+        GrRQxmMQMCmVTD95ASUBf8IDcdHPyrmYa9NhwZjNyxzQbjjoCIBnAUwxQj6vZ5+AkhY+YGJMuQ/r
+        vzad0onPqtZSoZMW/4v+1bbA6tt9nucv5NxakfIBAAA=
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-Ray:
+      - 765edf59b8098568-SCL
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json
+      Date:
+      - Sun, 06 Nov 2022 15:30:48 GMT
+      Server:
+      - cloudflare
+      Server-Timing:
+      - cf-q-config;dur=5.0000016926788e-06
+      Strict-Transport-Security:
+      - max-age=2592000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - origin, Accept-Encoding
+      Via:
+      - 1.1 google
+    status:
+      code: 200
+      message: OK
+version: 1

@@ -1,5 +1,5 @@
 import requests
-from pinacolada.constants import SUCCESS_STATUS_CODE
+from json.decoder import JSONDecodeError
 
 class GraphqlClient:
   """
@@ -14,7 +14,7 @@ class GraphqlClient:
       Returns GraphQL response from query.
     """
 
-    request = requests.post(
+    response = requests.post(
       self.base_url,
       json={
         "query": query,
@@ -23,7 +23,7 @@ class GraphqlClient:
       headers=headers
     )
 
-    if request.status_code == SUCCESS_STATUS_CODE:
-      return request.json()
-
-    raise Exception(f"Unexpected status code returned: {request.status_code}: {request.text}")
+    try:
+        return response.json()
+    except JSONDecodeError:
+        return {}

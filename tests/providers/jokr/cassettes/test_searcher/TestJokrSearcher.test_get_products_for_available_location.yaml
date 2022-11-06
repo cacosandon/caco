@@ -1,0 +1,195 @@
+interactions:
+- request:
+    body: '{"query": "\n      query HubByCoordinates($lat: String!, $lng: String!)
+      {\n        hubByCoordinates(lat: $lat, lng: $lng) {\n          id\n        }\n      }\n    ",
+      "variables": {"lat": "-33.4054017", "lng": "-70.56745"}}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '222'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.28.1
+    method: POST
+    uri: https://api-prd-cl.jokrtech.com/
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAA/wEtANL/eyJkYXRhIjp7Imh1YkJ5Q29vcmRpbmF0ZXMiOnsiaWQiOiJTQ0wwMDMi
+        fX198LXmlC0AAAA=
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-Ray:
+      - 765eeefd280585a4-SCL
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json
+      Date:
+      - Sun, 06 Nov 2022 15:41:28 GMT
+      Server:
+      - cloudflare
+      Server-Timing:
+      - cf-q-config;dur=6.0000020312145e-06
+      Strict-Transport-Security:
+      - max-age=2592000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - origin, Accept-Encoding
+      Via:
+      - 1.1 google
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"query": "\n      query SearchProducts($searchTerm: String!, $hubId: String)
+      {\n        searchProducts(searchTerm: $searchTerm, hubId: $hubId) {\n          products
+      {\n            sku\n          }\n        }\n      }\n    ", "variables": {"searchTerm":
+      "papas", "hubId": "SCL003"}}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '282'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.28.1
+    method: POST
+    uri: https://api-prd-cl.jokrtech.com/
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAA/22RzQrCMBCE3yVnD/ufxqfwLh5KKwgelP6cSt7dpIi0dfcUvh3CzswS+nZqw3kJ
+        470dusdlePVzN42VvH/va1k/53AOsQESAgDChkI+bbgYRVNQkj2vakBBYo+rMbk8JfQ4G8Q9R1o3
+        JuBxYWBfr9H/H8Xn5N4jEcHn4PolbtKBs2LJE8jPk829x9D0wJNWWw0dfZW+kLQE8afXGoPahtN3
+        sIy6vay933LOHx0IHpc6AgAA
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-Ray:
+      - 765eeefe7a528568-SCL
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json
+      Date:
+      - Sun, 06 Nov 2022 15:41:28 GMT
+      Server:
+      - cloudflare
+      Server-Timing:
+      - cf-q-config;dur=6.0000020312145e-06
+      Strict-Transport-Security:
+      - max-age=2592000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - origin, Accept-Encoding
+      Via:
+      - 1.1 google
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"query": "\n      query GetProductsData($productsSkus: [String!], $hubId:
+      String!) {\n        products(where: { sku_in: $productsSkus }) {\n          name\n          packshot1_front_grid
+      {\n            url\n          }\n          price(hubId: $hubId) {\n            amount\n          }\n        }\n      }\n    ",
+      "variables": {"productsSkus": ["7802420002182", "7804627650524", "7802000014123",
+      "7802000015632", "7802000015991", "7802000013607", "7801220000640", "7801220004303",
+      "7801220000657", "7802000013614", "7802000013621", "7802000014710", "7802000014703",
+      "7802000012389", "7802351002022", "7804627650364", "7802000016165", "7802950006827",
+      "7802420125430", "7802955006556", "2222222211115", "7802000015182"], "hubId":
+      "SCL003"}}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '740'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.28.1
+    method: POST
+    uri: https://api-prd-cl.jokrtech.com/
+  response:
+    body:
+      string: !!binary |
+        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
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-Ray:
+      - 765eeefffd7e85b0-SCL
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json
+      Date:
+      - Sun, 06 Nov 2022 15:41:29 GMT
+      Server:
+      - cloudflare
+      Server-Timing:
+      - cf-q-config;dur=6.0000020312145e-06
+      Strict-Transport-Security:
+      - max-age=2592000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - origin, Accept-Encoding
+      Via:
+      - 1.1 google
+    status:
+      code: 200
+      message: OK
+version: 1
